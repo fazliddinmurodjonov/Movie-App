@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.androiddatabaselesson2movieapp.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_addMovieFragment"
+            app:destination="@id/addMovieFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_editMovieFragment"
+            app:destination="@id/editMovieFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_aboutMovieFragment"
+            app:destination="@id/aboutMovieFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addMovieFragment"
+        android:name="com.example.androiddatabaselesson2movieapp.AddMovieFragment"
+        android:label="fragment_add_movie"
+        tools:layout="@layout/fragment_add_movie" />
+    <fragment
+        android:id="@+id/editMovieFragment"
+        android:name="com.example.androiddatabaselesson2movieapp.EditMovieFragment"
+        android:label="fragment_edit_movie"
+        tools:layout="@layout/fragment_edit_movie" />
+    <fragment
+        android:id="@+id/aboutMovieFragment"
+        android:name="com.example.androiddatabaselesson2movieapp.AboutMovieFragment"
+        android:label="fragment_about_movie"
+        tools:layout="@layout/fragment_about_movie" />
+</navigation>

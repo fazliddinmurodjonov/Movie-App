@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/MyColorFirst"
+    tools:context=".AddMovieFragment">
+
+    <LinearLayout
+        android:id="@+id/AddMovieLayoutOne"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/MyColorSecond"
+        android:gravity="top"
+        app:layout_constraintBottom_toTopOf="@id/AddMovieLayoutTwo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="15dp"
+            android:fontFamily="@font/cutive"
+            android:gravity="center_vertical"
+            android:text="Add movie"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            tools:ignore="RtlCompat" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/AddMovieLayoutTwo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/AddMovieLayoutOne">
+
+        <EditText
+            android:id="@+id/movieName"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/edittext_background"
+            android:fontFamily="@font/cutive"
+            android:hint="Movie name"
+            android:lines="1"
+            android:maxLength="30"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/textHintColor"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@id/movieAuthors"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/AddMovieLayoutTwo"
+            tools:ignore="MissingConstraints,NotSibling" />
+
+        <EditText
+            android:id="@+id/movieAuthors"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/edittext_background"
+            android:fontFamily="@font/cutive"
+            android:hint="Movie authors"
+            android:lines="1"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/textHintColor"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@id/movieAbout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/movieName"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/movieAbout"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@drawable/edittext_background"
+            android:fontFamily="@font/cutive"
+            android:hint="About movie"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/textHintColor"
+            android:textSize="14sp"
+            android:gravity="start"
+            app:layout_constraintBottom_toTopOf="@id/movieDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/movieAuthors"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+
+            android:id="@+id/movieDate"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/edittext_background"
+            android:fontFamily="@font/cutive"
+            android:hint="Movie date"
+            android:lines="1"
+            android:maxLength="10"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/textHintColor"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@id/movieSaveButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/movieAbout"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/movieSaveButton"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/button_background"
+            android:fontFamily="@font/cutive"
+            android:text="Save"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toBottomOf="@id/AddMovieLayoutTwo"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="MissingConstraints" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
